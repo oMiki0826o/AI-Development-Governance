@@ -1,0 +1,28 @@
+name: Validate Governance
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Compile tooling
+        run: python -m py_compile scripts/*.py
+
+      - name: Validate repository
+        run: python scripts/validate.py
+
+      - name: Bootstrap dry run
+        run: |
+          mkdir -p "${RUNNER_TEMP}/bootstrap-test"
+          python scripts/bootstrap_project.py "${RUNNER_TEMP}/bootstrap-test" --mode standard --dry-run

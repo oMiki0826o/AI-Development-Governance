@@ -1,0 +1,38 @@
+# ── OS / Editor ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Python tooling ──
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# ── Secrets / Local environment ──
+.env
+.env.*
+!.env.example
+
+# ── Temporary / Generated ──
+.tmp/
+tmp/
+temp/
+*.tmp
+*.bak
+*.log
+
+# ── Local project data and AI collaboration records ──
+data/
+
+# ── Archives / Release artifacts ──
+*.zip
+*.tar
+*.tar.gz
+*.7z
