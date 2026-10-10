@@ -1,3 +1,5 @@
 # Claude Code Integration
 
-Use the English governance files as project guidance and keep project-specific instructions in the project's `AGENTS.md`. Do not copy the entire repository into one prompt; load the relevant Rule, Workflow, and Gate for each task.
+Store project-specific context and commands in `CLAUDE.md` and link to task-relevant `.governance/` policies rather than pasting the entire set of rules into the entry file.
+
+Reference: [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/overview).

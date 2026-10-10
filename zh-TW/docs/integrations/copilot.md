@@ -1,12 +1,5 @@
-# GitHub Copilot
+# GitHub Copilot 整合
 
-GitHub Copilot 可以使用 Repository-wide instructions，常見位置是 `.github/copilot-instructions.md`。需要更細的範圍時，也能用 `.github/instructions/**/*.instructions.md` 做 path-specific instructions。部分 Copilot Agent / Code Review 工作流也支援 `AGENTS.md`。
+GitHub Copilot 的儲存庫指令通常可放在 `.github/copilot-instructions.md`，路徑限定規則另由 `.github/instructions/` 管理。這些入口應只提供專案資訊及 `.governance/` 的對應路徑，不要重新複製 Rule 的完整內容。
 
-對這套 Governance 來說，建議把 `.github/copilot-instructions.md` 當成輕量入口，只放 Repository 特有資訊與「什麼情況去讀哪份治理文件」。如果每一條通用 Rule 都再複製一份進去，之後很快就會產生兩個 Source of Truth。
-
-Path-specific instructions 比較適合真的有不同技術區域的 monorepo，例如 frontend 與 backend 的工具、測試方式差很多；小型專案通常不需要一開始就拆很多份。
-
-官方參考：
-
-- https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions
-- https://docs.github.com/en/copilot/reference/custom-instructions-support
+官方參考：[Copilot 自訂指令](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions)。

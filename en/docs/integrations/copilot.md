@@ -1,3 +1,5 @@
 # GitHub Copilot Integration
 
-Reference the English rules from the repository instruction mechanism used by the project. Keep the same Rule IDs when adding local guidance, and keep project-specific decisions in the project rather than changing general governance without evidence.
+Repository instructions may live under `.github/copilot-instructions.md`; additional path-specific instructions are possible. Use these files as lightweight pointers to project-specific policy and the vendored Governance rules, not as duplicate sources of truth.
+
+Reference: [Copilot custom instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions).

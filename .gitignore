@@ -1,38 +1,26 @@
-# ── OS / Editor ──
+# ── Local work, credentials and runtime data ──
+data/
+.env
+.env.*
+!.env.example
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
-*.swp
-*.swo
 
-# ── Python tooling ──
+# ── Python development ──
 __pycache__/
 *.py[cod]
+.venv/
+venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.venv/
-venv/
 
-# ── Secrets / Local environment ──
-.env
-.env.*
-!.env.example
-
-# ── Temporary / Generated ──
-.tmp/
-tmp/
-temp/
-*.tmp
-*.bak
-*.log
-
-# ── Local project data and AI collaboration records ──
-data/
-
-# ── Archives / Release artifacts ──
+# ── Build and temporary files ──
 *.zip
 *.tar
 *.tar.gz
-*.7z
+*.bak
+*.tmp
+*.log

@@ -1,67 +1,67 @@
 # Core Governance
 
-These principles apply across projects and define observable, verifiable engineering behavior.
+This file defines cross-project behavior. Platform safety constraints, user authorization and repository contracts outrank these generic rules.
 
-### CORE-001 — Understand before changing
+### CORE-001 — Understand before editing
 
-Understand the relevant architecture, data flow, constraints, and current state before editing.
+Inspect relevant architecture, current behavior, data flow and constraints before editing.
 
-### CORE-002 — Prefer evidence
+### CORE-002 — Evidence first
 
-Confirm facts from code, configuration, tests, documentation, or tools before treating them as facts.
+Use code, configuration, tests and tools to establish facts; distinguish evidence from assumptions.
 
-### CORE-003 — Do not fabricate results
+### CORE-003 — Never invent results
 
-Do not claim a command, test, review, or verification was completed unless it actually was.
+Never fabricate versions, functionality, tests, compatibility, files or publication status.
 
-### CORE-004 — Fix root causes first
+### CORE-004 — Fix root causes
 
-Prefer a minimal root-cause fix over accumulating workarounds.
+Do not stack fallbacks and workarounds to conceal unknown root causes.
 
 ### CORE-005 — Control scope
 
-Keep unrelated refactoring and improvements outside the current task.
+Change only what is needed; avoid unrelated refactors and behavior changes.
 
-### CORE-006 — Avoid unnecessary layers
+### CORE-006 — Avoid unnecessary abstractions
 
-Add abstractions only when they reduce total complexity and have a stable responsibility.
+Justify managers, wrappers and adapters with concrete responsibilities and benefits.
 
 ### CORE-007 — Protect existing work
 
-Do not overwrite, delete, or revert unconfirmed changes from users or other collaborators.
+Never silently overwrite uncommitted or unreviewed collaborator changes.
 
-### CORE-008 — Prefer reversible actions
+### CORE-008 — Prefer reversible changes
 
-Use recoverable approaches first, especially for high-risk or irreversible operations.
+Prefer reversible changes and seek authorization for irreversible external actions.
 
-### CORE-009 — Validate after changes
+### CORE-009 — Validate changes
 
-Every meaningful change must be followed by an appropriate validation level.
+Choose risk-appropriate checks; inspection alone is not runtime validation.
 
-### CORE-010 — Label unverified results
+### CORE-010 — Report validation limits
 
-Clearly distinguish verified, inferred, and unverified results.
+Explicitly mark unrun tests as unverified, never passed.
 
-### CORE-011 — Keep documentation consistent
+### CORE-011 — Keep docs factual
 
-Documentation, configuration, and implementation must describe the same actual behavior.
+Document actual verified features; label planned work as planned.
 
-### CORE-012 — Keep governance minimal
+### CORE-012 — Keep rules lean
 
-The governance project itself must not grow concepts without demonstrated value.
+Keep one authoritative statement per rule and avoid process for its own sake.
 
-### CORE-013 — Continue until acceptance criteria are complete
+### CORE-013 — Work toward acceptance criteria
 
-Define clear acceptance criteria and a work list at the start. Completing one phase, changing a batch of files, or running one test is not overall completion; continue while work inside the original scope remains executable.
+Define measurable acceptance criteria and do not confuse milestones with completion.
 
-### CORE-014 — Execute autonomously without expanding scope
+### CORE-014 — Autonomy without scope creep
 
-The agent may autonomously read, analyze, edit local files, and validate. Continuous execution does not authorize unrelated features, refactoring, or optimization; choose the smallest approach consistent with the existing architecture.
+Investigate available repository facts autonomously without expanding scope.
 
-### CORE-015 — Analyze, fix, and revalidate failures
+### CORE-015 — Analyze failures and retest
 
-When a test or validation fails, do not give up, hide the error, delete a valid test, or weaken a test to obtain a green result. Analyze the cause, fix it, and rerun the applicable validation until it passes or a real blocker is confirmed.
+Diagnose failures, fix and rerun tests; never hide legitimate failures.
 
-### CORE-016 — Report evidence when blocked; never fabricate completion
+### CORE-016 — Explain blockers
 
-Stop only after executable work is complete, required authority or external resources are unavailable, a material user decision is required, or system limits prevent continuation. Report completed work, attempts, blocker, unfinished work, and the minimum assistance needed.
+For permission, environment or material ambiguity blockers, report completed work and evidence.

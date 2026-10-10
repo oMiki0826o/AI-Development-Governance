@@ -1,16 +1,3 @@
-# Rule ID Reference
+# Rule Reference
 
-Rule IDs provide stable references for workflows, gates, reviews, and issue discussions.
-
-| Prefix | Topic |
-| --- | --- |
-| `CORE-*` | Core principles, continuous execution, and completion criteria |
-| `DEC-*` | Decisions and authorization |
-| `CONV-*` | Convergence and failure loops |
-| `BOOT-*` | Project bootstrap |
-| `FMT-*` | File formats and diff hygiene |
-| `ENG-*` | Engineering and architecture |
-| `VAL-*` | Validation |
-| `DOC-*` | Documentation |
-| `GIT-*` | Git operations |
-| `REL-*` | Release |
+Rule IDs remain stable across languages, such as `CORE-001`, `DEC-003` and `VAL-010`. Workflows and gates reference rule IDs instead of restating normative requirements. Use the matching Governance version when resolving references.

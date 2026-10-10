@@ -1,22 +1,8 @@
-# Bugfix Workflow
+# Bug 修復流程
 
-```text
-Reproduce / Observe
-  -> Collect Evidence
-  -> Trace
-  -> Root Cause Hypothesis
-  -> Verify Hypothesis
-  -> Fix
-  -> Validate
-  -> Regression
-  -> Close or Reassess
-```
-
-- **Reproduce / Observe**：先確認錯誤實際表現；無法重現時保存完整 Log、Stack trace、input 與環境資訊，遵循 `CORE-002`、`CORE-003`。
-- **Collect Evidence**：取得直接相關的 Error、Runtime state、Config、Version 與近期 Diff。
-- **Trace**：建立 Call Chain、Data Flow 或 Resource Lifecycle，找錯誤第一次偏離預期的位置。
-- **Root Cause Hypothesis**：提出可被證偽的原因假設，先設計最小驗證方式。
-- **Verify Hypothesis**：證據不支持時回到 Trace，不用 workaround 維持原方案。
-- **Fix**：依 `CORE-004`、`ENG-002` 採用最小合理修正。
-- **Validate / Regression**：依 Validation Rules 執行實際測試。
-- **Close or Reassess**：若符合 `CONV-002` 或 `CONV-003`，停止補丁連鎖並重新分析。
+1. 取得最小重現步驟、錯誤訊息及環境資訊（`CORE-002`）。
+2. 追蹤資料流與資源生命週期（`ENG-001`）。
+3. 建立可驗證的根因假設（`CORE-004`）。
+4. 如反覆加入補丁仍失敗，重新檢查假設（`CONV-002`、`CONV-003`）。
+5. 實作最小且合理的修正（`ENG-006`）。
+6. 增加回歸測試並確認舊路徑（`VAL-004`、`VAL-008`）。

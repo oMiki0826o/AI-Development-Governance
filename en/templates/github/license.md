@@ -1,3 +1,3 @@
-# License Template
+# LICENSE Template
 
-Choose a license deliberately, confirm that it matches the repository, and keep the final license text at the repository root. Do not claim a license that has not been added.
+Use official complete license texts; preserve legal wording. Check copyright owner, year, license type and third-party obligations.

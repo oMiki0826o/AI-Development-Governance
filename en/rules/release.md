@@ -1,29 +1,29 @@
-# Release Policy
+# Release
 
-### REL-001 — Release has separate completion criteria
+### REL-001 — Define release scope
 
-Finished implementation does not equal release readiness.
+Identify included features, fixes and exclusions.
 
-### REL-002 — Version has one source of truth
+### REL-002 — Version consistency
 
-Maintain one authoritative version and keep badges and release notes consistent with it.
+Keep version file, README, changelog and artifacts aligned.
 
-### REL-003 — Check dependencies only when applicable
+### REL-003 — Reproducible dependencies
 
-Require dependency metadata when the project actually uses dependencies.
+Check dependency manifests and locks when applicable.
 
-### REL-004 — Re-verify artifacts after creation
+### REL-004 — Verify release artifacts
 
-Open or extract the artifact and verify required files, version, and excluded data.
+Reopen packaged artifacts and inspect contents.
 
-### REL-005 — Verify in a clean environment when practical
+### REL-005 — Clean-environment verification
 
-Run the smallest clean installation or startup check that is practical.
+Run minimal checks in an isolated environment when practical.
 
-### REL-006 — Release notes describe actual contents
+### REL-006 — Accurate release notes
 
-Do not claim changes that are not included in the release.
+Describe shipped changes and known limitations accurately.
 
-### REL-007 — Tag and publish within authorization boundaries
+### REL-007 — Authorized publication
 
-Obtain applicable authorization before external publication or irreversible release actions.
+Confirm authorization before tags and external releases.

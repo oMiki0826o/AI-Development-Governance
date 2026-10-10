@@ -1,21 +1,25 @@
-# Documentation Policy
+# Documentation
 
-### DOC-001 — Documentation reflects actual state
+### DOC-001 — Document implemented behavior
 
-When documentation conflicts with behavior, verify the behavior and update stale documentation.
+Document actual behavior; do not present plans as implemented.
 
-### DOC-002 — Synchronize contract changes
+### DOC-002 — Write for people
 
-Update usage, examples, migration notes, and release notes when public contracts or installation behavior changes.
+Write README and docs for human readers, not as oversized agent prompts.
 
-### DOC-003 — Do not describe nonexistent content
+### DOC-003 — Separate documentation roles
 
-Remove or correct claims that are not supported by the repository.
+Rules are authoritative; docs explain reasons without redefining policy.
 
-### DOC-004 — Keep README as the entry point
+### DOC-004 — Test examples
 
-Use README for orientation and getting started; place deeper architecture and integration material in language-specific docs.
+Keep example commands and paths consistent with the project.
 
-### DOC-005 — GitHub publication template has the highest format authority
+### DOC-005 — The GitHub publication template has the highest format authority
 
-For README, LICENSE, `.gitignore`, Discord release copy, or GitHub repository descriptions, follow `templates/GithubRepoTemplate.md` first. Split templates under `templates/github/`, README, Docs, and Workflows may supplement or reference it, but must not weaken, rewrite, or ignore its confirmation checklist, bilingual structure, badges, license, or output validation requirements.
+For README, LICENSE, `.gitignore`, Discord release copy, or GitHub repository descriptions, follow `templates/GithubRepoTemplate.md` first. Split templates under `templates/github/`, README, Docs, and Workflows may supplement or reference it, but must not weaken or rewrite its confirmation checklist, bilingual structure, badges, license, or output validation requirements.
+
+### DOC-006 — README creation must reference the GitHub repository template
+
+Whenever a task creates, rewrites, or substantially updates a README, read and follow `templates/GithubRepoTemplate.md` before producing the output. A small unrelated typo or link fix does not require regenerating the README, but it must not violate the template's established structure or checks.

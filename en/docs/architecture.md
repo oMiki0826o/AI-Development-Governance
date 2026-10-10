@@ -1,10 +1,3 @@
-# Architecture
+# Architecture and Authority
 
-The repository separates Rules, Workflows, Gates, Templates, Docs, and Tooling by responsibility.
-
-- `rules/` contains authoritative governance rules.
-- `workflows/` sequences existing rules.
-- `gates/` provides stage checks and evidence requirements.
-- `templates/` defines reusable output formats.
-- `docs/` explains usage and background for human readers.
-- Root `scripts/` performs objective checks only.
+Rules are the authoritative statements. Workflows sequence existing rules; gates collect checks for key transitions; templates define output shapes; docs explain rationale. Keep project-specific constraints in the target project rather than duplicating universal policy. Use automated checks only for objectively verifiable invariants.

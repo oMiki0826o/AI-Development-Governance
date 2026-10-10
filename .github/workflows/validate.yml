@@ -4,25 +4,26 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  validate:
+  checks:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-
-      - name: Compile tooling
+          python-version: ${{ matrix.python-version }}
+      - name: Compile Python tools
         run: python -m py_compile scripts/*.py
-
-      - name: Validate repository
+      - name: Validate governance documents
         run: python scripts/validate.py
-
-      - name: Bootstrap dry run
-        run: |
-          mkdir -p "${RUNNER_TEMP}/bootstrap-test"
-          python scripts/bootstrap_project.py "${RUNNER_TEMP}/bootstrap-test" --mode standard --dry-run
+      - name: Unit and integration tests
+        run: python -m unittest discover -s tests -v

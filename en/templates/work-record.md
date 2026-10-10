@@ -1,21 +1,7 @@
-# Work Record - <title>
+# Work Record Template
 
-## Goal
-
-<goal and completion criteria>
-
-## Changes
-
-<actual changes>
-
-## Validation
-
-<commands and results>
-
-## Not Verified
-
-<remaining limitations>
-
-## Decisions
-
-<important decisions and reasons>
+- Date:
+- Goal and acceptance criteria:
+- Changes:
+- Checks executed:
+- Known limitations:

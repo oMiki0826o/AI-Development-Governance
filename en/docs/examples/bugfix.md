@@ -1,3 +1,3 @@
-# Example: Bug Fix
+# Example: Repeated Background Task
 
-Reproduce the issue, collect the complete evidence, trace the affected path, and verify a root-cause hypothesis before editing. After the smallest reasonable fix, run regression checks. If failures form a patch chain or loop, stop and reassess instead of adding another workaround.
+A task duplicates after reload. Instead of adding another `if running`, trace ownership of creation, cancellation and event handlers. Reassess hypotheses after failed attempts, fix the actual lifecycle bug and add regression coverage.

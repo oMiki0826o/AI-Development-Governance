@@ -1,41 +1,11 @@
-# Bootstrap Project
+# Bootstrap 工具使用說明
 
-`scripts/bootstrap_project.py` 用來把這套治理方式套進另一個 Repository，不需要手動複製一堆檔案。
+使用 `python3 scripts/bootstrap_project.py <專案目錄>` 將治理入口放入其他專案。預設語言為繁體中文、模式為 `minimal`，並會補上 `.gitignore` 的 `data/` 規則。
 
-最常用的是預設模式：
+三種模式各有用途：`minimal` 複製核心 Rule 與基本 Workflow，`standard` 增加常用工程規則與 Gate，`full` 包含選定語言下全部規範、範例與模板。可加 `--language en` 或 `--language bilingual`。
 
-```bash
-python3 scripts/bootstrap_project.py /path/to/project
-```
+開始寫入前會確認所有目的地。既有 `AGENTS.md` 或已安裝的治理檔案若衝突，預設拒絕覆蓋；要明確更新可先使用 `--dry-run --force` 審查，再使用 `--force`。即使 `--force`，也不會覆寫 `data/ai/` 下已存在的個人工作紀錄。
 
-它會加入一份專案級 `AGENTS.md`、`data/ai/project-memory.md` 與 records 目錄。原本已存在的檔案不會被覆蓋。
+每次安裝產生 `.governance/manifest.json`，記錄治理版本、模式、語言及檔案雜湊。`--dry-run` 不會新增任何檔案。工具在寫入失敗時會盡力恢復先前內容。
 
-## 三種模式
-
-### minimal
-
-只加入專案入口與 AI 工作資料。適合治理倉庫在別處可讀，或只想先整理 Repository 規則的專案。
-
-### standard
-
-除了 minimal 內容，也把最常用的 Rules、Task / Bugfix Workflow 與日常 Gate 複製到 `.governance/`。適合希望規範跟著 Repository 一起版本控制，但不需要 Release 全套文件的情況。
-
-### full
-
-把 Rules、Workflows、Gates 與 GitHub Template 全部 vendoring 到 `.governance/`。適合需要離線、自包含或正式團隊共用的 Repository。
-
-```bash
-python3 scripts/bootstrap_project.py /path/to/project --mode full
-```
-
-Vendored 規則是某一版的 snapshot。之後若 Governance 上游更新，不應悄悄覆蓋專案內已修改的版本；先 Review diff，再決定是否更新。
-
-## 覆蓋既有檔案
-
-預設遇到衝突會停止並列出檔案。只有確定要覆蓋時才使用：
-
-```bash
-python3 scripts/bootstrap_project.py /path/to/project --force
-```
-
-這個選項不應拿來當一般更新機制。
+此版本尚未提供增量合併器：更新前仍應檢查目的地的既有修改。

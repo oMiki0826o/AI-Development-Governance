@@ -1,17 +1,17 @@
-# Convergence and Failure Loop Policy
+# Convergence and Complexity
 
-### CONV-001 — New abstractions must reduce complexity
+### CONV-001 — Justify abstractions
 
-An abstraction needs a stable responsibility and must reduce duplication, coupling, or unclear boundaries.
+Explain which concrete duplication or coupling a new abstraction solves.
 
 ### CONV-002 — Detect patch chains
 
-When Patch A requires B and B requires C or more workarounds, reassess A instead of treating patch count as progress.
+When successive guards fail, trace the lifecycle instead of stacking patches.
 
-### CONV-003 — Stop and reassess failure loops
+### CONV-003 — Reassess evidence
 
-When substantially different fixes reproduce the same failure, stop editing and rebuild the evidence and root-cause model.
+Revise root-cause hypotheses when new evidence contradicts them.
 
-### CONV-004 — Use a complexity budget
+### CONV-004 — Complexity budget
 
-After a large change, review new concepts, overlap, removable workarounds, and maintenance cost.
+Justify added state, interfaces, dependencies and branches.

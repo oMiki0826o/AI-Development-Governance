@@ -1,37 +1,37 @@
-# File Format Policy
+# File Format
 
-### FMT-001 — Default text format
+### FMT-001 — UTF-8 and LF
 
-Unless the project specifies otherwise, use UTF-8, LF line endings, one final newline, and no meaningless trailing whitespace.
+Default to UTF-8, LF and one final newline for text; exclude binary data.
 
-### FMT-002 — Project formatters take priority
+### FMT-002 — Honor project formatters
 
-Follow project formatter or linter settings, then `.editorconfig` / `.gitattributes`, then existing project style, then governance defaults.
+Prioritize repository formatters, `.editorconfig` and established conventions.
 
-### FMT-003 — Keep naming and indentation consistent
+### FMT-003 — Consistent naming and indentation
 
-Follow the established naming and indentation style of the project.
+Follow language and local conventions without accidental mixed indentation.
 
-### FMT-004 — Parse structured files after changes
+### FMT-004 — Parse structured files
 
-Validate JSON, YAML, TOML, and other structured files with their appropriate parser.
+Parse changed JSON, YAML and TOML with appropriate tools.
 
-### FMT-005 — Keep Markdown readable
+### FMT-005 — Readable Markdown
 
-Preserve headings, links, lists, code fences, and document structure.
+Use coherent headings, valid links and identified code blocks.
 
-### FMT-006 — Separate secrets and examples
+### FMT-006 — Keep secrets separate
 
-Never commit secrets; use safe example configuration instead.
+Use examples for configuration shape; never commit real secrets.
 
-### FMT-007 — Separate source, runtime, generated, and artifacts
+### FMT-007 — Classify artifact types
 
-Do not mix generated or runtime output with maintained source files.
+Differentiate source, runtime, generated and release artifacts.
 
 ### FMT-008 — Avoid formatting noise
 
-Do not reformat unrelated files or large sections during a focused change.
+Keep unrelated reformatting out of focused changes.
 
-### FMT-009 — Do not migrate formats by preference
+### FMT-009 — No arbitrary migrations
 
-Format migrations require a concrete engineering reason and appropriate decision authority.
+Do not migrate configuration or dependency formats without engineering benefit.

@@ -1,13 +1,9 @@
-# AGENTS.md
+# Project Agent Entry
 
-## Project
+Keep project-specific architecture boundaries, entry points and validation commands here. Shared policies live under `.governance/` and should not be recopied.
 
-- Project purpose: `<describe the project>`
-- Primary entry point: `<path or command>`
-- Validation command: `<command>`
+## Project details
 
-## Boundaries
-
-- Keep project-specific rules here.
-- Do not overwrite existing work without confirmation.
-- Record unverified assumptions and validation limits.
+- Name: from the real repository
+- Entrypoint: from the project
+- Tests: from executable commands

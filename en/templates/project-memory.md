@@ -1,17 +1,7 @@
 # Project Memory
 
-## Current State
+Stored locally under `data/ai/`, never committed. Capture necessary engineering decisions without secrets.
 
-<verified current state>
+## Confirmed decisions
 
-## Architecture Decisions
-
-<decisions with reasons and constraints>
-
-## Current Work
-
-<active work and next step>
-
-## Remaining Risks
-
-<known limitations and unverified areas>
+## Open items

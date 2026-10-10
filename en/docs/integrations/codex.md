@@ -1,5 +1,5 @@
 # Codex Integration
 
-Use the language-specific governance directory as the project instruction source. Start with `en/rules/core.md`, `en/rules/decision.md`, and `en/workflows/task-lifecycle.md`. Load additional rules only for the current task.
+Codex uses repository `AGENTS.md` instructions. The generated file points to vendored `.governance/` policies. Add actual architecture boundaries and validation commands without copying the entire governance library into one prompt.
 
-Keep temporary plans and collaboration records under the local project's `data/ai/` directory.
+Reference: [Codex documentation](https://developers.openai.com/codex/).

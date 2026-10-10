@@ -1,12 +1,10 @@
-# Pre-push Gate
+# Before pushing
 
 - **Gate ID**: `GATE-PRE-PUSH`
-- **Actor**: Agent or developer preparing a push
-- **Evidence**: Branch, remote, upstream, commits, working-tree state, and validation results
-- **Blocking**: Yes; unclear remote, secrets, or unauthorized history rewrite block push
+- **Actor**: Developer or agent performing this phase
+- **Evidence**: Relevant files, diffs, executed checks and results
+- **Blocking**: yes
 
-- [ ] Branch and remote are correct.
-- [ ] The commits intended for push were reviewed.
-- [ ] The working tree and applicable validation are known.
-- [ ] No secrets or local data are included.
-- [ ] Force push or history rewrite has explicit `DEC-004` authorization (`GIT-005`).
+- [ ] Confirm push authorization (`GIT-005`)
+- [ ] Perform relevant regression checks (`VAL-008`)
+- [ ] Review commits being pushed (`GIT-002`)

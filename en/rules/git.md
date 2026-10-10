@@ -1,33 +1,21 @@
-# Git Policy
+# Git
 
-### GIT-001 — Inspect status and diff first
+### GIT-001 — Inspect working tree
 
-Before changing Git state, inspect status, branch, and relevant diffs.
+Inspect Git state before edits and commits; protect unrelated work.
 
-### GIT-002 — Do not stage blindly
+### GIT-002 — Review diffs
 
-Review files before staging; staged files must represent a coherent work unit.
+Review diff for scope, documentation and unexpected artifacts.
 
-### GIT-003 — Read-only Git operations are generally safe
+### GIT-003 — Keep secrets out
 
-Status, diff, log, branch inspection, and remote inspection can normally be performed autonomously.
+Screen commits for secrets, runtime data, dumps and caches.
 
-### GIT-004 — Understand working-tree impact
+### GIT-004 — Accurate commit messages
 
-Understand the effect before using commands that change the working tree.
+Describe actual changes without inventing validation results.
 
-### GIT-005 — Destructive operations require authorization
+### GIT-005 — Authorized remote operations
 
-Require explicit authorization for hard reset, clean, force push, history rewrite, deletion, or data loss.
-
-### GIT-006 — Do not split commits for contribution counts
-
-Commit boundaries should describe meaningful work.
-
-### GIT-007 — Do not use default answers for pull, merge, or rebase
-
-Inspect branch and remote state before selecting an integration strategy.
-
-### GIT-008 — Prefer traceable rollback after publication
-
-Published history should remain recoverable and auditable.
+Require appropriate authorization for pushes, merges, forced updates and tags.

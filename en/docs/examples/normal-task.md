@@ -1,7 +1,3 @@
-# Example: Normal Task
+# Example: Ordinary Change
 
-1. Read the task, current state, and completion criteria.
-2. Inspect the relevant entry points, configuration, tests, and documentation.
-3. Read `en/rules/core.md`, `en/rules/decision.md`, and the task lifecycle workflow.
-4. Scope the smallest necessary change and pass the Pre-edit Gate.
-5. Implement, validate at the applicable level, review the diff, and report evidence and limitations.
+For a configuration change, confirm expected behavior, existing schema and compatibility first. Inspect the parser, call sites and tests; make the smallest viable update, execute parsing and regression tests, and report only checks that actually ran.

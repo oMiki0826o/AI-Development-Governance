@@ -1,37 +1,25 @@
-# Engineering Policy
+# Engineering
 
-### ENG-001 — Trace the relevant scope before editing
+### ENG-001 — Trace the call chain
 
-Read the relevant entry points, callers, callees, configuration, tests, and data flow.
+Inspect relevant callers, callees, configuration, data models and tests.
 
-### ENG-002 — Require a real reason for architecture changes
+### ENG-002 — Respect component boundaries
 
-Do not refactor merely because another architecture looks cleaner.
+Keep responsibilities and dependency direction clear; avoid cycles.
 
-### ENG-003 — Prefer correctness and simplicity
+### ENG-003 — Manage resource lifecycles
 
-Prioritize correct behavior, maintainability, clarity, and the smallest reasonable design.
+Ensure tasks, sockets, handlers and connections are cleaned up.
 
-### ENG-004 — Extract hard-coded values only when needed
+### ENG-004 — Do not hide errors
 
-Extract values when they represent configuration, environment differences, secrets, or changing policy.
+Preserve diagnostic context; never silently swallow unexpected errors.
 
-### ENG-005 — Handle errors at the appropriate level
+### ENG-005 — Preserve configuration compatibility
 
-Do not silently swallow exceptions or hide failures.
+Check existing configuration compatibility and migration needs.
 
-### ENG-006 — Separate configuration and secrets
+### ENG-006 — Small coherent changes
 
-Keep non-sensitive configuration separate from credentials and secret material.
-
-### ENG-007 — Confirm new dependencies are necessary
-
-Check whether existing capabilities are sufficient before adding a dependency.
-
-### ENG-008 — Complete resource lifecycles
-
-Open resources must have appropriate cleanup and failure handling.
-
-### ENG-009 — Refactoring must not silently change behavior
-
-Preserve external behavior unless the change is intentional, documented, and authorized.
+Prefer reviewable, testable changes consistent with existing architecture.

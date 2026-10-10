@@ -1,3 +1,3 @@
 # Example: Release
 
-Select the release scope, validate the applicable behavior, synchronize documentation, inspect the repository, build and reopen the artifact, and pass the Pre-release Gate. Record the actual version, checks, limitations, and authorization before publishing.
+Confirm version and scope; update accurate documentation; run applicable tests. Reopen the built ZIP or JAR to inspect contents, remove secrets and runtime data, and publish only with authorization.

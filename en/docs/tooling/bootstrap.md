@@ -1,9 +1,5 @@
-# Bootstrap Tool
+# Bootstrap Guide
 
-Use the bootstrap tool to add a governance entry point to another project without copying the entire repository into one prompt.
+Run `python3 scripts/bootstrap_project.py <project-directory>`. Modes: `minimal` provides core policies and entry points; `standard` adds common engineering policies and gates; `full` includes all docs and templates. Select `--language zh-TW`, `en`, or `bilingual`.
 
-```bash
-python3 scripts/bootstrap_project.py /path/to/project --language en
-```
-
-Supported modes are `minimal`, `standard`, and `full`. Existing files are not overwritten unless `--force` is explicitly provided. Use `--language bilingual` to install both language entry points.
+Conflicts block writes unless `--force` is explicitly requested. Existing `data/ai/` work files are never overwritten. `--dry-run` previews all changes and writes nothing. All modes enforce `data/` in the target `.gitignore` and record a `.governance/manifest.json` including version, selected mode and SHA-256 hashes. Review diffs before updating vendored rules; no automatic merge facility is included yet.

@@ -1,9 +1,5 @@
-# Validator
+# Validator Guide
 
-Run the repository validator from the project root:
+Run `python3 scripts/validate.py` or use `--root <repository>`. Checks include repository structure, UTF-8, LF, trailing newlines and whitespace, local Markdown links and anchors, rule references, gate metadata, bilingual filenames, release versions and `.gitignore`.
 
-```bash
-python3 scripts/validate.py
-```
-
-It checks objective invariants: required files, UTF-8 and LF formatting, final newlines, relative Markdown links, matching Rule and Gate IDs, version consistency, and Gate metadata. It does not judge policy quality or replace tests, review, or real-environment verification.
+The tool reports failures without hiding missing files or corrupt text. It intentionally does not fetch external URLs or claim to judge architecture quality or root-cause correctness. Untracked `data/` remains outside the scan.

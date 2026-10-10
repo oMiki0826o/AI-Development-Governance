@@ -1,21 +1,21 @@
-# Project Bootstrap Policy
+# Project Bootstrap
 
 ### BOOT-001 — Minimum project content
 
-A project should provide a README, LICENSE, `.gitignore`, dependency definition or an explicit no-dependency statement, project content, and a `data/` separation.
+Provide README, license, ignore rules, dependencies and usable entry points as applicable.
 
-### BOOT-002 — Dependencies must be traceable
+### BOOT-002 — Traceable dependencies
 
-Use one appropriate dependency definition. Do not create an empty manifest merely for appearance.
+Prefer one authoritative dependency definition or an explicit no-dependency statement.
 
-### BOOT-003 — Separate runtime and AI work data
+### BOOT-003 — Local data isolation
 
-Use `data/runtime/` for runtime output and `data/ai/` for project context, decisions, plans, handoff material, and collaboration records. The entire `data/` directory is local and MUST be included in `.gitignore`; it must not be published.
+Keep `data/ai/` and `data/runtime/` local; ignore all `data/` and publish curated decisions in `docs/`.
 
-### BOOT-004 — Create directories conditionally
+### BOOT-004 — Create directories as needed
 
-Create tests, docs, scripts, config, source, and CI directories only when they have a real purpose.
+Do not create unused tests, services or adapters merely for appearance.
 
-### BOOT-005 — Bootstrap must be usable
+### BOOT-005 — Verify generated projects
 
-Before completion, the README, license, ignore rules, dependencies, entry point, and installation or startup state must be clear and accurate.
+Generated projects must have working agent entry points, paths and ignore rules.

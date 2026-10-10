@@ -1,41 +1,41 @@
-# Validation Policy
+# Validation and Evidence
 
-### VAL-001 — Level 0: Inspection
+### VAL-001 — Level 0: inspection
 
-Reading code, diffs, configuration, and documentation supports analysis but not a claim of runtime verification.
+Review code, configuration and diffs without claiming runtime checks.
 
-### VAL-002 — Level 1: Syntax / Parse / Compile
+### VAL-002 — Level 1: syntax / compile
 
-This proves only that the relevant parser or compiler accepts the content.
+Run parser, compiler or syntax checks and report their limited scope.
 
-### VAL-003 — Level 2: Static analysis
+### VAL-003 — Level 2: static analysis
 
-Run applicable linters, type checks, or static analyzers and report their actual scope.
+Only report lint, type or import analysis as passed when actually run.
 
-### VAL-004 — Level 3: Unit tests
+### VAL-004 — Level 3: unit tests
 
-Run relevant isolated tests and report the tested behavior.
+Use isolated tests and add regression coverage where practical.
 
-### VAL-005 — Level 4: Integration tests
+### VAL-005 — Level 4: integration tests
 
-Verify interactions between real components where applicable.
+Verify interactions across components, configuration and resources.
 
-### VAL-006 — Level 5: Smoke test
+### VAL-006 — Level 5: smoke tests
 
-Verify the smallest meaningful end-to-end path.
+Exercise the smallest usable startup, basic operation and shutdown path.
 
-### VAL-007 — Level 6: Real environment verification
+### VAL-007 — Level 6: real environment
 
-Only real execution in the required environment supports a full environment claim.
+Only claim external-service or hardware validation after actual execution.
 
-### VAL-008 — Regression must cover affected paths
+### VAL-008 — Regression coverage
 
-Review existing behavior and relevant old paths after a change.
+Check impacted existing APIs, configuration and lifecycle paths.
 
-### VAL-009 — Do not break tests for a green result
+### VAL-009 — Never weaken tests for green CI
 
-Fix implementation or requirements; do not weaken tests merely to pass.
+Do not remove meaningful tests or relax assertions simply to pass.
 
-### VAL-010 — Report precisely
+### VAL-010 — Precise validation reporting
 
-State commands run, results, validation level, and unverified limitations.
+Report executed commands, outcomes, scope and remaining gaps.

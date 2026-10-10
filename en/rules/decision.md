@@ -1,25 +1,25 @@
-# Decision Policy
+# Decisions and Authorization
 
-### DEC-001 — Verify independently first
+### DEC-001 — Investigate before asking
 
-Use the repository, existing documentation, tests, Git state, and trusted tools before asking the user.
+Investigate facts available in the repository and trusted references before asking.
 
-### DEC-002 — Decide low-risk details autonomously
+### DEC-002 — Distinguish design choices
 
-Choose details that do not change public contracts, persistent data, or long-term direction.
+Decide small reversible details, but confirm changes to public contracts.
 
-### DEC-003 — Ask about major contract changes
+### DEC-003 — Authorize external actions
 
-Ask before changing public APIs, persistent data formats, licenses, compatibility, or removing features.
+Publishing, pushing and irreversible external actions require appropriate authorization.
 
-### DEC-004 — Require explicit authorization for high-risk actions
+### DEC-004 — Ask minimally
 
-Require authorization for destructive operations, force pushes, history rewrites, deletion, production deployment, or irreversible migrations.
+Ask only for the minimum missing decision and state its consequences.
 
-### DEC-005 — Consolidate questions
+### DEC-005 — Safe defaults
 
-Group related questions and ask only what cannot be answered from available evidence.
+Prefer the smallest reversible change consistent with existing contracts.
 
-### DEC-006 — Use a conservative fallback
+### DEC-006 — Preserve decisions
 
-When an answer cannot be obtained, choose the smallest reversible option and record the limitation.
+Record consequential architecture decisions and constraints without exposing secrets.

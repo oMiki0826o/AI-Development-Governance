@@ -1,37 +1,9 @@
-# AGENTS.md
+# 專案 Agent 入口
 
-本檔只放這個 Repository 特有、而且 Agent 每次工作都值得知道的規則。通用工作流程由 AI Development Governance 提供，不在這裡重新複製。
+只保留本專案真正特有的架構邊界、主要程式入口與測試命令。共用治理規則使用 `.governance/` 目錄，不在這裡重抄。
 
-## Project
+## 專案資訊
 
-- Name: `<project-name>`
-- Runtime / Platform: `<runtime>`
-- Supported versions: `<versions>`
-
-## Architecture Boundaries
-
-- `<project-specific dependency direction>`
-- `<module ownership rule>`
-- `<public API boundary>`
-
-## Project Layout
-
-```text
-<important project paths>
-```
-
-## Configuration and Data
-
-- Configuration: `<path / policy>`
-- Runtime data: `<path / policy>`
-- Secrets: `<environment / secret store policy>`
-
-## Validation Commands
-
-```bash
-<syntax / test / lint / build commands>
-```
-
-## Local Notes
-
-只填真正屬於這個專案的限制。語言偏好、通用 Git、安全與驗證規則不要在這裡重抄一份。
+- 名稱：依實際 Repository 填寫
+- 啟動：依實際入口填寫
+- 測試：依實際測試命令填寫

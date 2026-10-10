@@ -1,3 +1,3 @@
-# Repository Description Template
+# Repository Description
 
-Write one concise sentence describing what the repository does and who it is for. Avoid marketing claims that are not supported by the project.
+A concise, verifiable sentence stating purpose and main technologies; avoid unsupported superlatives.
