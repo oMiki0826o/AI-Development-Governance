@@ -163,6 +163,12 @@ def check_version(errors: list[str]) -> None:
         errors.append('README license badge does not match MIT LICENSE')
 
 
+def check_local_data_policy(errors: list[str]) -> None:
+    gitignore = (ROOT / '.gitignore').read_text(encoding='utf-8').splitlines()
+    if 'data/' not in {line.strip() for line in gitignore}:
+        errors.append('.gitignore must contain an exact data/ rule')
+
+
 def main() -> int:
     errors: list[str] = []
     check_required(errors)
@@ -175,6 +181,7 @@ def main() -> int:
     check_rule_ids(errors)
     check_gates(errors)
     check_version(errors)
+    check_local_data_policy(errors)
 
     if errors:
         print(f'Validation failed with {len(errors)} issue(s):')

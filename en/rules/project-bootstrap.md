@@ -10,7 +10,7 @@ Use one appropriate dependency definition. Do not create an empty manifest merel
 
 ### BOOT-003 — Separate runtime and AI work data
 
-Use `data/runtime/` for runtime output and `data/ai/` for project context, decisions, plans, handoff material, and collaboration records. The entire `data/` directory is local and ignored by default.
+Use `data/runtime/` for runtime output and `data/ai/` for project context, decisions, plans, handoff material, and collaboration records. The entire `data/` directory is local and MUST be included in `.gitignore`; it must not be published.
 
 ### BOOT-004 — Create directories conditionally
 

@@ -16,6 +16,7 @@ Use this entry template to create consistent README, LICENSE, `.gitignore`, and 
 - Keep README factual and concise.
 - Do not invent screenshots, links, versions, or test results.
 - Keep secrets and local runtime data out of the repository.
+- Always include `data/` in `.gitignore`; all AI collaboration documents and local project data belong there and are not published.
 - Use the project language-specific documentation directory for deeper material.
 
 ## Validation

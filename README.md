@@ -20,7 +20,9 @@
 ### 關於
 AI Development Governance 是一套給 AI Coding Agent 與人類協作者使用的開發治理規範。它關注的是可以觀察與驗證的工作行為，例如：如何理解任務、什麼時候應自行判斷或詢問、如何避免補丁連鎖、怎麼驗證修改，以及 Commit、Push 與 Release 前該檢查哪些內容。
 
-這個倉庫把內容分成 Rule、Workflow、Gate、Template 與 Docs。Rule 是唯一規範來源；Workflow 只說明工作順序；Gate 負責階段性檢查；Template 提供可重複使用的輸出格式；Docs 則是給人閱讀的說明與範例，不重新定義規則。
+這個倉庫把內容分成 Rule、Workflow、Gate、Template 與 Docs。Rule 是唯一規範來源；Workflow 只說明工作順序；Gate 負責階段性檢查；Template 提供可重複使用的輸出格式；Docs 則是給人閱讀的說明與範例，不重新定義規則。凡涉及 GitHub 發布文件，優先遵守 [`GithubRepoTemplate.md`](./zh-TW/templates/GithubRepoTemplate.md)，其他 GitHub 子模板只能補充它。
+
+所有 AI 協作文件、工作計畫、交接資料與本地執行資料都放在 `data/`，而且 `data/` 必須整體被 `.gitignore` 忽略，不會發布到 GitHub。
 
 ### 功能
 - 提供任務理解、決策權限、工程修改、驗證、Git 與 Release 的核心規則。
@@ -69,7 +71,9 @@ python3 scripts/bootstrap_project.py /path/to/project
 ### About
 AI Development Governance is a development workflow specification for AI coding agents and human collaborators. It focuses on observable, verifiable engineering behavior: understanding a task, deciding when to act or ask, avoiding patch chains, validating changes, and checking work before commit, push, and release.
 
-The repository separates Rules, Workflows, Gates, Templates, and Docs. Rules are authoritative; workflows sequence those rules; gates define readiness checks; templates provide reusable output structures; and docs explain how the pieces are used without redefining policy.
+The repository separates Rules, Workflows, Gates, Templates, and Docs. Rules are authoritative; workflows sequence those rules; gates define readiness checks; templates provide reusable output structures; and docs explain how the pieces are used without redefining policy. For GitHub publication files, [`GithubRepoTemplate.md`](./en/templates/GithubRepoTemplate.md) has the highest template authority.
+
+All AI collaboration documents, work plans, handoff material, and local runtime data belong under `data/`. The entire `data/` directory MUST be ignored by `.gitignore` and is not published to GitHub.
 
 ### Features
 - Core policies for task scope, decision authority, engineering, validation, Git, and releases.

@@ -14,7 +14,7 @@ README、LICENSE 與 `.gitignore` 的格式入口是 `templates/GithubRepoTempla
 
 ### BOOT-003 — Runtime 與 AI 工作資料分離
 
-`data/runtime/` 放 Database、Cache、State、PID、Log 或下載產物等執行期資料，預設不進 Git。`data/ai/` 放人類與 Agent 都可讀的專案 Context、決策、設計討論、實作計畫、交接資料與工作紀錄，不保存 Secrets。原始 AI 協作紀錄放在 `data/ai/records/`，預設由 `.gitignore` 排除；整理後且對使用者有價值的穩定結論才可寫入公開文件。
+`data/runtime/` 放 Database、Cache、State、PID、Log 或下載產物等執行期資料。`data/ai/` 放人類與 Agent 都可讀的專案 Context、決策、設計討論、實作計畫、交接資料與工作紀錄，不保存 Secrets。所有 `data/` 內容都是本地資料，`data/` 必須整體加入 `.gitignore`，不得上傳；整理後且對使用者有價值的穩定結論才可另寫入公開文件。
 
 ### BOOT-004 — 條件式建立目錄
 
