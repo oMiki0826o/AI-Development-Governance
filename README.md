@@ -27,6 +27,7 @@ AI Development Governance 是一套給 AI Coding Agent 與人類協作者使用�
 ### 功能
 - 提供任務理解、決策權限、工程修改、驗證、Git 與 Release 的核心規則。
 - 提供 Stop-and-Reassess、Patch Chain 與 Complexity Budget，避免問題越修越複雜。
+- 要求以 Acceptance Criteria 持續執行，測試失敗時分析、修復並重新驗證，不把階段成果誤報為完成。
 - 使用 Rule ID 讓 Workflow、Gate 與文件可以穩定引用同一條規則。
 - 提供 Pre-edit、Pre-commit、Pre-push 與 Pre-release Gate，並定義檢查者與應保留的證據。
 - 提供 `scripts/validate.py` 檢查倉庫完整性，以及 `scripts/bootstrap_project.py` 將治理入口套用到其他專案。
@@ -78,6 +79,7 @@ All AI collaboration documents, work plans, handoff material, and local runtime 
 ### Features
 - Core policies for task scope, decision authority, engineering, validation, Git, and releases.
 - Stop-and-Reassess, Patch Chain, and Complexity Budget guidance to keep fixes from accumulating unnecessary layers.
+- Continuous execution against explicit acceptance criteria, with failure analysis, repair, and revalidation before completion claims.
 - Stable Rule IDs for cross-references from workflows and gates.
 - Pre-edit, pre-commit, pre-push, and pre-release gates with actors and evidence expectations.
 - A repository validator and a project bootstrap tool written with the Python standard library.

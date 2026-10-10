@@ -4,7 +4,7 @@ Rule ID 的目的很單純：讓 Workflow、Gate、Issue 或 Review 可以引用
 
 | Prefix | 文件 | 主題 |
 | --- | --- | --- |
-| `CORE-*` | `rules/core.md` | 核心原則 |
+| `CORE-*` | `rules/core.md` | 核心原則、持續執行與完成驗收 |
 | `DEC-*` | `rules/decision.md` | 自主決定、詢問與授權 |
 | `CONV-*` | `rules/convergence.md` | 收斂、Patch Chain、Stop-and-Reassess |
 | `BOOT-*` | `rules/project-bootstrap.md` | 新專案初始化 |

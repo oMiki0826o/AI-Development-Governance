@@ -4,7 +4,7 @@ Rule IDs provide stable references for workflows, gates, reviews, and issue disc
 
 | Prefix | Topic |
 | --- | --- |
-| `CORE-*` | Core principles |
+| `CORE-*` | Core principles, continuous execution, and completion criteria |
 | `DEC-*` | Decisions and authorization |
 | `CONV-*` | Convergence and failure loops |
 | `BOOT-*` | Project bootstrap |
